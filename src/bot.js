@@ -20,7 +20,7 @@ const soundboard = [
 
 //#region ----------------- LOGIN --------------
 
-//const TOKEN = 'NzY2MDIyNzU3NzYyNTk2ODc1.X4dUSQ.56udeNdamMBa9_ziD_zYie0nDz0';
+const TOKEN = '';
 //client.login(TOKEN);
 client.login(process.env.token);
 
