@@ -65,7 +65,7 @@ client.on('message', function(message) {
                     if (!voiceChannel) return message.reply("non sei in un canale vocale.");
                     voiceChannel.join()
                     .then(connection => {
-                        const dispatcher = connection.play(`https://www.mboxdrive.com/${x}.mp3`, {volume: 0.6})
+                        const dispatcher = connection.play(`https://www.mboxdrive.com/${x}.mp3`, {volume: 0.4})
                         .on('finish', () => {
                             voiceChannel.leave();
                         })
