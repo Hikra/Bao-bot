@@ -1,20 +1,32 @@
 {
-  "name": "new_Bao-bot",
+  "name": "Bao-bot",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.19.0"
+  },
+  "description": "",
   "main": "bot.js",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "dotenv": "^8.2.0",
+    "discord.js": "^12.4.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/bot.js",
     "dev": "nodemon ./src/bot.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hikra/Bao-bot.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@discordjs/opus": "^0.3.3",
-    "discord.js": "^12.4.1",
-    "dotenv": "^8.2.0"
+  
+  "bugs": {
+    "url": "https://github.com/Hikra/Bao-bot/issues"
   },
-  "devDependencies": {},
-  "description": ""
+  "homepage": "https://github.com/Hikra/Bao-bot#readme"
 }
