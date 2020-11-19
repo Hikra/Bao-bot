@@ -25,7 +25,7 @@ const soundboard = [
 client.login(process.env.token);
 
 client.on('ready', () => {
-    client.user.setActivity('a farsi i cazzi suoi', { type: 'PLAYING' })
+    client.user.setActivity('!help', { type: 'LISTENING' })
     console.log(`${client.user.tag} pronto.`);
 });
 //#endregion
