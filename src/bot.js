@@ -14,9 +14,10 @@ const ban_w = [
                 ];
 const soundboard = [
                 'paguro',
-                'fanculo'
+                'fanculo',
+                'cutg',
+                'chingchong'
                 ];
-
 
 //#region ----------------- LOGIN --------------
 
@@ -56,7 +57,7 @@ client.on('message', function(message) {
                 soundboard.forEach(x => {
                     res = `${res}${x}\n`;
                 });
-                message.reply(`Suoni disponibili:\n${res}`);
+                message.reply(`Suoni disponibili (prefisso '!'):\n${res}`);
             }
             soundboard.forEach(x => {
                 if (message.content.toLowerCase() == `!${x}`) {
