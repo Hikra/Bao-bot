@@ -3,7 +3,7 @@ const fs = require('fs');
 const discord = require('discord.js');
 const client = new discord.Client();
 
-//const TOKEN = 'NzY2MDIyNzU3NzYyNTk2ODc1.X4dUSQ.56udeNdamMBa9_ziD_zYie0nDz0';
+// const TOKEN = 'NzY2MDIyNzU3NzYyNTk2ODc1.X4dUSQ.56udeNdamMBa9_ziD_zYie0nDz0';
 const PREFIX = '!';
 const DelPrefix = '-'; 
 const ban_w = [
@@ -15,16 +15,16 @@ const ban_w = [
 
 
 //client.login(TOKEN);
-client.login(process.env.token);
 
 
 client.on('ready', () => {
     console.log(`${client.user.tag} pronto.`);
 });
 
+client.login(process.env.token);
+
 
 const CheckPrefix = (message, cmdName) => message.content.toLowerCase().startsWith(DelPrefix + cmdName);
-
 
 client.on('message', function(message) {
     if(message.author.bot) return;
@@ -79,3 +79,4 @@ client.on('message', function(message) {
     // }
     
 });
+
