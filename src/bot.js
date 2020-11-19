@@ -20,11 +20,12 @@ const soundboard = [
 
 //#region ----------------- LOGIN --------------
 
-const TOKEN = '';
+//const TOKEN = '';
 //client.login(TOKEN);
 client.login(process.env.token);
 
 client.on('ready', () => {
+    client.user.setActivity('a farsi i cazzi suoi', { type: 'PLAYING' })
     console.log(`${client.user.tag} pronto.`);
 });
 //#endregion
