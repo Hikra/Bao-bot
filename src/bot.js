@@ -53,6 +53,7 @@ client.on('message', function(message) {
         }
         else if (message.content.toLowerCase().startsWith('!')) {
             if (message.content.toLowerCase().includes('help')) {
+                message.delete();
                 var res = '';
                 soundboard.forEach(x => {
                     res = `${res}${x}\n`;
@@ -61,6 +62,7 @@ client.on('message', function(message) {
             }
             soundboard.forEach(x => {
                 if (message.content.toLowerCase() == `!${x}`) {
+                    message.delete();
                     const voiceChannel = message.member.voice.channel;
                     if (!voiceChannel) return message.reply("non sei in un canale vocale.");
                     voiceChannel.join()
