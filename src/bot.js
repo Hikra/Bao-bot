@@ -3,6 +3,8 @@ const fs = require('fs');
 const discord = require('discord.js');
 const client = new discord.Client();
 
+const CheckPrefix = (message, cmdName) => message.content.toLowerCase().startsWith(DelPrefix + cmdName);
+
 
 const PREFIX = '!';
 const DelPrefix = '-'; 
@@ -21,8 +23,10 @@ const soundboard = [
 
 //#region ----------------- LOGIN --------------
 
+//METTERE IL TOKEN PER TESTARE CON 'npm run dev'
 //const TOKEN = '';
 //client.login(TOKEN);
+
 client.login(process.env.token);
 
 client.on('ready', () => {
@@ -32,9 +36,15 @@ client.on('ready', () => {
 //#endregion
 
 
+// client.on("voiceStateUpdate", (oldVoiceState, newVoiceState) => { // Listeing to the voiceStateUpdate event
+//     if (newVoiceState.channel && newVoiceState.member.user.id == '195474322473615360') { // The member connected to a channel.
+//         newVoiceState.member.voice.kick();
+//     } else if (oldVoiceState.channel && oldVoiceState.member.user.id == '195474322473615360') { // The member disconnected from a channel.
+//         //DO SOMETHING
+//     };
+// });
 
 
-const CheckPrefix = (message, cmdName) => message.content.toLowerCase().startsWith(DelPrefix + cmdName);
 
 client.on('message', function(message) {
     if(message.author.bot) return;

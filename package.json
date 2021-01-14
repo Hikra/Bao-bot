@@ -1,6 +1,6 @@
 {
   "name": "Bao-bot",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "engines": {
     "node": "12.19.0"
   },
