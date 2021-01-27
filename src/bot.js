@@ -51,7 +51,7 @@ client.on('message', function(message) {
 
     try {
 
-        if (CheckPrefix(message, '') && message.channel.id == '570313576301068303') {
+        if (CheckPrefix(message, '') && message.channel.id != '766300892159803392') {
             message.delete();
             message.author.send('Hai sbagliato canale, brutto scemo.');
         }
