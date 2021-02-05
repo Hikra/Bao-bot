@@ -6,7 +6,7 @@ const client = new discord.Client();
 const CheckPrefix = (message, cmdName) => message.content.toLowerCase().startsWith(DelPrefix + cmdName);
 
 
-const PREFIX = '!';
+const PREFIX = '$';
 const DelPrefix = '-'; 
 const ban_w = [
                 'negro',
@@ -30,7 +30,7 @@ const soundboard = [
 client.login(process.env.token);
 
 client.on('ready', () => {
-    client.user.setActivity('!help', { type: 'LISTENING' })
+    client.user.setActivity('$help', { type: 'LISTENING' })
     console.log(`${client.user.tag} pronto.`);
 });
 //#endregion
@@ -61,14 +61,14 @@ client.on('message', function(message) {
         else if (ban_w.some(w => message.content.toLowerCase().includes(w))) {
             message.reply('che cazzo fai non si dice');
         }
-        else if (message.content.toLowerCase().startsWith('!')) {
+        else if (message.content.toLowerCase().startsWith('$')) {
             if (message.content.toLowerCase().includes('help')) {
                 message.delete();
                 var res = '';
                 soundboard.forEach(x => {
                     res = `${res}${x}\n`;
                 });
-                message.reply(`Suoni disponibili (prefisso '!'):\n${res}`);
+                message.reply(`Suoni disponibili (prefisso '$'):\n${res}`);
             }
             soundboard.forEach(x => {
                 if (message.content.toLowerCase() == `!${x}`) {
