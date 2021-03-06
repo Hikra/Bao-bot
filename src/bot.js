@@ -53,7 +53,7 @@ client.on('message', function(message) {
 
         if (CheckPrefix(message, '') && message.channel.id != '766300892159803392') {
             message.delete();
-            message.author.send('Hai sbagliato canale, brutto scemo.');
+            message.author.send('Hai sbagliato canale, qui non vanno i comandi.');
         }
         else if (message.content.toLowerCase() == 'ciao') {
             message.reply('ciao bello!');
